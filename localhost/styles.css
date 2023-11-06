@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 10px;
+    margin: 0; 
+}
+
+.menu a.active {
+    font-weight: bold; 
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.segments {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.segment {
+    flex: 1;
+    width: 300px; /* Фіксований розмір для всіх сегментів */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
+}
+
+.segment.current {
+    display: block;
+}
+
+/* Приховати стрілки за межами видимості */
+#prev {
+    visibility: hidden;
+}
+
+#next {
+    visibility: visible;
+}
+
+.other-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-left, .image-right {
+    flex: 1;
+    text-align: center;
+}
+
+.image-left img, .image-right img {
+    width: 50%;
+    height: auto;
+}
+
+.logo {
+    flex: 1;
+    text-align: left;
+    font-size: 24px;
+}
+
+.tabs {
+    flex: 2;
+    text-align: center;
+}
+
+.tabs a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.phone {
+    flex: 1;
+    text-align: right;
+    font-size: 18px;
+}
+
+main {
+    flex: 1; 
+    padding: 20px; 
+}
+
+footer {
+    background-color: #2d2d2d;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Відступи між таблицями */
+}
+
+th {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+td {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Стилі для тексту, що розташований під таблицею */
+.large-text {
+    font-size: 20px; /* Збільшити розмір шрифту */
+    font-weight: bold; /* Зробити текст товстим */
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    filter: blur(0);
+    transition: filter 0.5s;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-wrapper:hover img {
+    filter: blur(5px);
+}
+
+.image-wrapper:hover .image-text {
+    display: block;
+}
+
+.centered-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto; 
+    font-size: 24px;
+}
+
+.content1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Вирівнюємо зверху сторінки */
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo, .tabs, .phone {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .tabs a {
+        display: block;
+        margin: 5px 0;
+    }
+}

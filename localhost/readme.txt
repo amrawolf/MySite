@@ -1,0 +1,1 @@
+Для використання БД я застосовував OpenServer і phpMyAdmin
